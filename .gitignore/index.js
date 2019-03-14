@@ -216,7 +216,7 @@ message.author.send({embed: {
 
 if(message.content == '--topguild') {
 
-	  if (client.guilds.size < 10) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
+	  if (client.guilds.size < 10) return message.reply("Le bot a pas `10` guild")
   
 		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()	
 	
@@ -280,7 +280,7 @@ if(message.content == '--topguild') {
 
 
 if (message.content === '--test') {
-  if (client.guilds.size < 10) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
+  if (client.guilds.size < 2) return message.reply("Le bot a pas `10` guild")
   
 		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
   message.channel.send(`**${top[0].name}**: ${top[0].memberCount}`)
