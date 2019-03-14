@@ -213,7 +213,7 @@ message.author.send({embed: {
 
 
 
-if (client.guilds.size < 10) return
+if (client.guilds.size < 10) return message.reply("Bot `10` X")
   
 		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
 if(message.content == '--topguild') {
