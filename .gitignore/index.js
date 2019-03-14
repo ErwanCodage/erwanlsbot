@@ -213,7 +213,7 @@ message.author.send({embed: {
 
 
 
-if (client.guilds.size < 5) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
+if (client.guilds.size < 10) return message.reply("Le bot a pas plus de  `10` guild !")
   
 		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
 if(message.content == '--topguild') {
