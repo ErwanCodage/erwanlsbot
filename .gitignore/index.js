@@ -213,12 +213,12 @@ message.author.send({embed: {
 
 
 
-  if (client.guilds.size < 10) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
-  
-		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
+
 if(message.content == '--topguild') {
 
-		
+	  if (client.guilds.size < 10) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
+  
+		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()	
 	
     message.channel.send({embed: {
         color: 110000,
@@ -280,6 +280,9 @@ if(message.content == '--topguild') {
 
 
 if (message.content === '--test') {
+  if (client.guilds.size < 10) return message.reply("Bot `10` tane sunucuda bulunmuyor!")
+  
+		const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
   message.channel.send(`**${top[0].name}**: ${top[0].memberCount}`)
    
  }
