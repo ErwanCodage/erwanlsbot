@@ -573,4 +573,4 @@ else message.channel.send(":x: " + "| Je n'étais pas capable de lire ça :(");
 //   client.channels.get('554332595366789160').send(`**Une guilde a enlever mon bot** \n  Nom : ${guild.name}.`);
 //});
 
-client.login('process.env.TOKEN');
+client.login(process.env.TOKEN);
