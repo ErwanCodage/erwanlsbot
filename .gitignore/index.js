@@ -306,7 +306,7 @@ if (message.content === '--chanellinfo') {
   if (cmd === `${prefix}report`) {
       
 	  
-	  if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Tu a pas la permissions d'utiliser la commande.");
+	  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Tu a pas la permissions d'utiliser la commande.");
 	  let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("impossible de trouver l'utilisateur.");
     let rreason = args.join(" ").slice(22);
