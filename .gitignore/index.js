@@ -12,7 +12,11 @@ client.on('ready', () => {
   
   
 });
-
+client.on("guildCreate", guild => {
+  console.log(`Une Nouvelle guilde a ajouter mon bot : ${guild.name} (id: ${guild.id}). Cette guilde a ${guild.memberCount} Membre!`);
+   client.channels.get('554332525258866729').send(`** Une Nouvelle guilde a ajouter mon bot** \n   Nom : ${guild.name}  \n ID : (id: ${guild.id}). \n  Cette guilde a ${guild.memberCount} Membre!`);
+  // guild.owner.send("Bonjour/bonsoir, je suis Erwan_, merci de m'avoir ajouté à votre serveur ! Si vous avez des probleme avec le bot contacter moi Erwan_#9308 !");
+});
 client.on('message', async message => {
 
 
